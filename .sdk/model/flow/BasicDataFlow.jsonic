@@ -1,0 +1,22 @@
+# BasicDataFlow
+
+main: kit: flow: BasicDataFlow:
+{
+  entity: "data",
+  kind: "basic",
+  name: "BasicDataFlow",
+  step: [
+    {
+      op: "list",
+      valid: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "data_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicDataFlow"
+}

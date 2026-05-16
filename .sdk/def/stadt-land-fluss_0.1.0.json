@@ -1,0 +1,197 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Stadt Land Fluss",
+    "description": "Compact solution for Stadt Land Fluss (City Country River) game in German. Provides a database of German words categorized by Stadt (City), Land (Country), Fluss (River), Name, Beruf (Profession), Tier (Animal), Marke (Brand), and Pflanze (Plant).",
+    "version": "1.0.0",
+    "contact": {
+      "url": "https://github.com/slftool/slftool.github.io"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://github.com/slftool/slftool.github.io/blob/master/LICENSE"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://slftool.github.io",
+      "description": "Production server"
+    }
+  ],
+  "paths": {
+    "/data.json": {
+      "get": {
+        "summary": "Get Stadt Land Fluss database",
+        "description": "Returns the complete database of German words categorized for the Stadt Land Fluss game. Categories include Stadt (City), Land (Country), Fluss (River), Name, Beruf (Profession), Tier (Animal), Marke (Brand), and Pflanze (Plant).",
+        "operationId": "getDatabase",
+        "tags": [
+          "Database"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with the complete word database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Database"
+                },
+                "example": {
+                  "stadt": [
+                    "Berlin",
+                    "München",
+                    "Hamburg"
+                  ],
+                  "land": [
+                    "Deutschland",
+                    "Österreich",
+                    "Schweiz"
+                  ],
+                  "fluss": [
+                    "Rhein",
+                    "Donau",
+                    "Elbe"
+                  ],
+                  "name": [
+                    "Anna",
+                    "Max",
+                    "Sophie"
+                  ],
+                  "beruf": [
+                    "Arzt",
+                    "Lehrer",
+                    "Ingenieur"
+                  ],
+                  "tier": [
+                    "Hund",
+                    "Katze",
+                    "Elefant"
+                  ],
+                  "marke": [
+                    "BMW",
+                    "Mercedes",
+                    "Adidas"
+                  ],
+                  "pflanze": [
+                    "Rose",
+                    "Tulpe",
+                    "Baum"
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Database not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Database": {
+        "type": "object",
+        "description": "Complete database of German words categorized for Stadt Land Fluss game",
+        "properties": {
+          "stadt": {
+            "type": "array",
+            "description": "List of German cities",
+            "items": {
+              "type": "string"
+            }
+          },
+          "land": {
+            "type": "array",
+            "description": "List of countries",
+            "items": {
+              "type": "string"
+            }
+          },
+          "fluss": {
+            "type": "array",
+            "description": "List of rivers",
+            "items": {
+              "type": "string"
+            }
+          },
+          "name": {
+            "type": "array",
+            "description": "List of names",
+            "items": {
+              "type": "string"
+            }
+          },
+          "beruf": {
+            "type": "array",
+            "description": "List of professions",
+            "items": {
+              "type": "string"
+            }
+          },
+          "tier": {
+            "type": "array",
+            "description": "List of animals",
+            "items": {
+              "type": "string"
+            }
+          },
+          "marke": {
+            "type": "array",
+            "description": "List of brands",
+            "items": {
+              "type": "string"
+            }
+          },
+          "pflanze": {
+            "type": "array",
+            "description": "List of plants",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "description": "Error response",
+        "properties": {
+          "error": {
+            "type": "string",
+            "description": "Error message"
+          },
+          "code": {
+            "type": "integer",
+            "description": "Error code"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Database",
+      "description": "Operations related to accessing the Stadt Land Fluss word database"
+    }
+  ],
+  "externalDocs": {
+    "description": "GitHub Repository",
+    "url": "https://github.com/slftool/slftool.github.io"
+  }
+}

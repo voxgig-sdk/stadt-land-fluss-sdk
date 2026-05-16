@@ -1,0 +1,50 @@
+{
+  "existing": {
+    "data": {
+      "DATA00": {
+        "beruf": [],
+        "fluss": [],
+        "land": [],
+        "marke": [],
+        "name": [],
+        "pflanze": [],
+        "stadt": [],
+        "tier": []
+      },
+      "DATA01": {
+        "beruf": [],
+        "fluss": [],
+        "land": [],
+        "marke": [],
+        "name": [],
+        "pflanze": [],
+        "stadt": [],
+        "tier": []
+      },
+      "DATA02": {
+        "beruf": [],
+        "fluss": [],
+        "land": [],
+        "marke": [],
+        "name": [],
+        "pflanze": [],
+        "stadt": [],
+        "tier": []
+      }
+    }
+  },
+  "new": {
+    "data": {
+      "data_ref01": {
+        "beruf": [],
+        "fluss": [],
+        "land": [],
+        "marke": [],
+        "name": [],
+        "pflanze": [],
+        "stadt": [],
+        "tier": []
+      }
+    }
+  }
+}

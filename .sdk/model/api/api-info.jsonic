@@ -1,0 +1,27 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      contact: {
+        url: "https://github.com/slftool/slftool.github.io"
+      }
+      description: "Compact solution for Stadt Land Fluss (City Country River) game in German. Provides a database of German words categorized by Stadt (City), Land (Country), Fluss (River), Name, Beruf (Profession), Tier (Animal), Marke (Brand), and Pflanze (Plant)."
+      license: {
+        name: "MIT"
+        url: "https://github.com/slftool/slftool.github.io/blob/master/LICENSE"
+      }
+      servers: [
+        {
+          description: "Production server"
+          url: "https://slftool.github.io"
+        }
+      ]
+      title: "Stadt Land Fluss"
+      version: "1.0.0"
+    }
+  }
+}
+
+}

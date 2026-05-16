@@ -1,0 +1,72 @@
+# Entity: data
+
+main: kit: entity: data: {
+
+  alias: field: {}
+
+  fields: [
+    {
+      name: "beruf"
+      req: false
+      type: "`$ARRAY`"
+    }
+    {
+      name: "fluss"
+      req: false
+      type: "`$ARRAY`"
+    }
+    {
+      name: "land"
+      req: false
+      type: "`$ARRAY`"
+    }
+    {
+      name: "marke"
+      req: false
+      type: "`$ARRAY`"
+    }
+    {
+      name: "name"
+      req: false
+      type: "`$ARRAY`"
+    }
+    {
+      name: "pflanze"
+      req: false
+      type: "`$ARRAY`"
+    }
+    {
+      name: "stadt"
+      req: false
+      type: "`$ARRAY`"
+    }
+    {
+      name: "tier"
+      req: false
+      type: "`$ARRAY`"
+    }
+  ]
+
+  name: "data"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          method: "GET"
+          orig: "/data.json"
+          parts: [
+            "data.json"
+          ]
+          transform: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}
