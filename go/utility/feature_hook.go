@@ -3,7 +3,7 @@ package utility
 import (
 	"reflect"
 
-	"github.com/voxgig-sdk/stadt-land-fluss-sdk/core"
+	"github.com/voxgig-sdk/stadt-land-fluss-sdk/go/core"
 )
 
 func featureHookUtil(ctx *core.Context, name string) {

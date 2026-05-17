@@ -3,7 +3,7 @@ package sdktest
 import (
 	"testing"
 
-	sdk "github.com/voxgig-sdk/stadt-land-fluss-sdk"
+	sdk "github.com/voxgig-sdk/stadt-land-fluss-sdk/go"
 )
 
 func TestCustomUtility(t *testing.T) {

@@ -1,6 +1,6 @@
 package utility
 
-import "github.com/voxgig-sdk/stadt-land-fluss-sdk/core"
+import "github.com/voxgig-sdk/stadt-land-fluss-sdk/go/core"
 
 func resultBodyUtil(ctx *core.Context) *core.Result {
 	response := ctx.Response

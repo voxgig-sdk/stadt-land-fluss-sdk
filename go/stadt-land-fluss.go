@@ -1,10 +1,10 @@
 package voxgigstadtlandflusssdk
 
 import (
-	"github.com/voxgig-sdk/stadt-land-fluss-sdk/core"
-	"github.com/voxgig-sdk/stadt-land-fluss-sdk/entity"
-	"github.com/voxgig-sdk/stadt-land-fluss-sdk/feature"
-	_ "github.com/voxgig-sdk/stadt-land-fluss-sdk/utility"
+	"github.com/voxgig-sdk/stadt-land-fluss-sdk/go/core"
+	"github.com/voxgig-sdk/stadt-land-fluss-sdk/go/entity"
+	"github.com/voxgig-sdk/stadt-land-fluss-sdk/go/feature"
+	_ "github.com/voxgig-sdk/stadt-land-fluss-sdk/go/utility"
 )
 
 // Type aliases preserve external API.

@@ -1,9 +1,9 @@
 package entity
 
 import (
-	"github.com/voxgig-sdk/stadt-land-fluss-sdk/core"
+	"github.com/voxgig-sdk/stadt-land-fluss-sdk/go/core"
 
-	vs "github.com/voxgig/struct"
+	vs "github.com/voxgig-sdk/stadt-land-fluss-sdk/go/utility/struct"
 )
 
 type DataEntity struct {

@@ -9,10 +9,10 @@ import (
 	"testing"
 	"time"
 
-	sdk "github.com/voxgig-sdk/stadt-land-fluss-sdk"
-	"github.com/voxgig-sdk/stadt-land-fluss-sdk/core"
+	sdk "github.com/voxgig-sdk/stadt-land-fluss-sdk/go"
+	"github.com/voxgig-sdk/stadt-land-fluss-sdk/go/core"
 
-	vs "github.com/voxgig/struct"
+	vs "github.com/voxgig-sdk/stadt-land-fluss-sdk/go/utility/struct"
 )
 
 func TestDataEntity(t *testing.T) {

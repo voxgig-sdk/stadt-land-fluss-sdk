@@ -1,6 +1,6 @@
 package utility
 
-import "github.com/voxgig-sdk/stadt-land-fluss-sdk/core"
+import "github.com/voxgig-sdk/stadt-land-fluss-sdk/go/core"
 
 func init() {
 	core.UtilityRegistrar = registerAll

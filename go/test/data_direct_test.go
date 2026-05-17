@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	sdk "github.com/voxgig-sdk/stadt-land-fluss-sdk"
-	"github.com/voxgig-sdk/stadt-land-fluss-sdk/core"
+	sdk "github.com/voxgig-sdk/stadt-land-fluss-sdk/go"
+	"github.com/voxgig-sdk/stadt-land-fluss-sdk/go/core"
 )
 
 func TestDataDirect(t *testing.T) {
