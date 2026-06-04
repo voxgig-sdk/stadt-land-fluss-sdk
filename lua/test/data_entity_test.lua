@@ -92,7 +92,6 @@ function data_basic_setup(extra)
     ["STADTLANDFLUSS_TEST_DATA_ENTID"] = idmap,
     ["STADTLANDFLUSS_TEST_LIVE"] = "FALSE",
     ["STADTLANDFLUSS_TEST_EXPLAIN"] = "FALSE",
-    ["STADTLANDFLUSS_APIKEY"] = "NONE",
   })
 
   local idmap_resolved = helpers.to_map(
@@ -104,7 +103,6 @@ function data_basic_setup(extra)
   if env["STADTLANDFLUSS_TEST_LIVE"] == "TRUE" then
     local merged_opts = vs.merge({
       {
-        apikey = env["STADTLANDFLUSS_APIKEY"],
       },
       extra or {},
     })

@@ -93,14 +93,12 @@ func dataDirectSetup(mockres any) *dataDirectSetupResult {
 	env := envOverride(map[string]any{
 		"STADTLANDFLUSS_TEST_DATA_ENTID": map[string]any{},
 		"STADTLANDFLUSS_TEST_LIVE":    "FALSE",
-		"STADTLANDFLUSS_APIKEY":       "NONE",
 	})
 
 	live := env["STADTLANDFLUSS_TEST_LIVE"] == "TRUE"
 
 	if live {
 		mergedOpts := map[string]any{
-			"apikey": env["STADTLANDFLUSS_APIKEY"],
 		}
 		client := sdk.NewStadtLandFlussSDK(mergedOpts)
 

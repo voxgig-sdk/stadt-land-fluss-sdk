@@ -20,7 +20,17 @@
           }
         ],
         "title": "Stadt Land Fluss",
-        "version": "1.0.0"
+        "version": "1.0.0",
+        "tagline": "German Stadt-Land-Fluss word database delivered as a single JSON file, organised alphabetically by first letter",
+        "homepage": "https://slftool.github.io",
+        "docs_url": "https://github.com/slftool/slftool.github.io",
+        "license_short": "MIT License — free to use for your own purposes with attribution.",
+        "license_md": "- Released under the MIT License.\n- You may use the database for your own purposes, including commercial use, subject to MIT terms.\n- Attribution to the upstream `slftool` project is appreciated.\n- No warranty is provided for completeness or accuracy of word entries.",
+        "about_md": "Stadt Land Fluss is a community-maintained word database for the classic German party game *Stadt-Land-Fluss* (City, Country, River). It is published as a static JSON file by the [slftool](https://github.com/slftool) project and served from GitHub Pages at [slftool.github.io](https://slftool.github.io).\n\nWhat you get from the API:\n\n- A single `GET https://slftool.github.io/data.json` endpoint returning the full database in JSON.\n- Word lists across the standard categories: Stadt (city), Land (country), Fluss (river), Name (first name), Beruf (profession), Tier (animal), Marke (brand) and Pflanze (plant).\n- Entries organised alphabetically by first letter so you can pick valid answers for any round.\n\nThe service is a static file hosted on GitHub Pages: there is no authentication, no API key, and CORS is enabled so it can be fetched directly from a browser. Because it is a single JSON document, the recommended pattern is to fetch once and cache locally. Contributions and additional words are accepted via GitHub issues on the upstream repository.",
+        "entity_desc": {
+          "data": "The full Stadt-Land-Fluss word database, returned by `GET /data.json` as a single JSON document containing word lists for each game category (Stadt, Land, Fluss, Name, Beruf, Tier, Marke, Pflanze) keyed by first letter."
+        },
+        "auth": false
       },
       "config": {
         "auth": {
@@ -28,7 +38,15 @@
         },
         "headers": {
           "content-type": "application/json"
-        }
+        },
+        "docs_order": [
+          "ts",
+          "py",
+          "php",
+          "go",
+          "rb",
+          "lua"
+        ]
       },
       "entity": {
         "data": {
