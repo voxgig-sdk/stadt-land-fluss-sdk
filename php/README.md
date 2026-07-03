@@ -10,7 +10,7 @@ The PHP SDK for the StadtLandFluss API — an entity-oriented client using PHP c
 
 ## Install
 ```bash
-composer require voxgig/stadt-land-fluss-sdk
+composer require voxgig-sdk/stadt-land-fluss
 ```
 
 

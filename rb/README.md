@@ -10,13 +10,13 @@ The Ruby SDK for the StadtLandFluss API — an entity-oriented client using idio
 
 ## Install
 ```bash
-gem install stadt-land-fluss-sdk
+gem install voxgig-sdk-stadt-land-fluss
 ```
 
 Or add to your `Gemfile`:
 
 ```ruby
-gem "stadt-land-fluss-sdk"
+gem "voxgig-sdk-stadt-land-fluss"
 ```
 
 Then run:

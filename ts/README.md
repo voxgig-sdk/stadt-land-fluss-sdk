@@ -10,7 +10,7 @@ The TypeScript SDK for the StadtLandFluss API — a type-safe, entity-oriented c
 
 ## Install
 ```bash
-npm install stadt-land-fluss
+npm install @voxgig-sdk/stadt-land-fluss
 ```
 ## Tutorial: your first API call
 

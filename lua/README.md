@@ -10,7 +10,7 @@ The Lua SDK for the StadtLandFluss API — an entity-oriented client using Lua c
 
 ## Install
 ```bash
-luarocks install stadt-land-fluss-sdk
+luarocks install voxgig-sdk-stadt-land-fluss
 ```
 
 If the module is not yet published, add the source directory to

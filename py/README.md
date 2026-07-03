@@ -10,7 +10,7 @@ The Python SDK for the StadtLandFluss API — an entity-oriented client followin
 
 ## Install
 ```bash
-pip install stadt-land-fluss-sdk
+pip install voxgig-sdk-stadt-land-fluss
 ```
 
 Or install from source:
