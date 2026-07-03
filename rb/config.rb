@@ -15,6 +15,9 @@ module StadtLandFlussConfig
       },
       "options" => {
         "base" => "https://slftool.github.io",
+        "auth" => {
+          "prefix" => "Bearer",
+        },
         "headers" => {
           "content-type" => "application/json",
         },
@@ -26,84 +29,84 @@ module StadtLandFlussConfig
         "data" => {
           "fields" => [
             {
+              "active" => true,
               "name" => "beruf",
               "req" => false,
               "type" => "`$ARRAY`",
-              "active" => true,
               "index$" => 0,
             },
             {
+              "active" => true,
               "name" => "fluss",
               "req" => false,
               "type" => "`$ARRAY`",
-              "active" => true,
               "index$" => 1,
             },
             {
+              "active" => true,
               "name" => "land",
               "req" => false,
               "type" => "`$ARRAY`",
-              "active" => true,
               "index$" => 2,
             },
             {
+              "active" => true,
               "name" => "marke",
               "req" => false,
               "type" => "`$ARRAY`",
-              "active" => true,
               "index$" => 3,
             },
             {
+              "active" => true,
               "name" => "name",
               "req" => false,
               "type" => "`$ARRAY`",
-              "active" => true,
               "index$" => 4,
             },
             {
+              "active" => true,
               "name" => "pflanze",
               "req" => false,
               "type" => "`$ARRAY`",
-              "active" => true,
               "index$" => 5,
             },
             {
+              "active" => true,
               "name" => "stadt",
               "req" => false,
               "type" => "`$ARRAY`",
-              "active" => true,
               "index$" => 6,
             },
             {
+              "active" => true,
               "name" => "tier",
               "req" => false,
               "type" => "`$ARRAY`",
-              "active" => true,
               "index$" => 7,
             },
           ],
           "name" => "data",
           "op" => {
             "list" => {
+              "input" => "data",
               "name" => "list",
               "points" => [
                 {
+                  "active" => true,
+                  "args" => {},
                   "method" => "GET",
                   "orig" => "/data.json",
                   "parts" => [
                     "data.json",
                   ],
+                  "select" => {},
                   "transform" => {
                     "req" => "`reqdata`",
                     "res" => "`body`",
                   },
-                  "active" => true,
-                  "args" => {},
-                  "select" => {},
                   "index$" => 0,
                 },
               ],
-              "input" => "data",
               "key$" => "list",
             },
           },

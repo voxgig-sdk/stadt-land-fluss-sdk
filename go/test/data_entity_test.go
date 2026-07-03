@@ -119,6 +119,7 @@ func dataBasicSetup(extra map[string]any) *entityTestSetup {
 		"STADTLANDFLUSS_TEST_DATA_ENTID": idmap,
 		"STADTLANDFLUSS_TEST_LIVE":      "FALSE",
 		"STADTLANDFLUSS_TEST_EXPLAIN":   "FALSE",
+		"STADTLANDFLUSS_APIKEY":         "NONE",
 	})
 
 	idmapResolved := core.ToMapAny(env["STADTLANDFLUSS_TEST_DATA_ENTID"])
@@ -129,6 +130,7 @@ func dataBasicSetup(extra map[string]any) *entityTestSetup {
 	if env["STADTLANDFLUSS_TEST_LIVE"] == "TRUE" {
 		mergedOpts := vs.Merge([]any{
 			map[string]any{
+				"apikey": env["STADTLANDFLUSS_APIKEY"],
 			},
 			extra,
 		})

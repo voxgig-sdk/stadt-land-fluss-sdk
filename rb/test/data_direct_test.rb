@@ -62,12 +62,14 @@ def data_direct_setup(mockres)
   env = Runner.env_override({
     "STADTLANDFLUSS_TEST_DATA_ENTID" => {},
     "STADTLANDFLUSS_TEST_LIVE" => "FALSE",
+    "STADTLANDFLUSS_APIKEY" => "NONE",
   })
 
   live = env["STADTLANDFLUSS_TEST_LIVE"] == "TRUE"
 
   if live
     merged_opts = {
+      "apikey" => env["STADTLANDFLUSS_APIKEY"],
     }
     client = StadtLandFlussSDK.new(merged_opts)
     return {

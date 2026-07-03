@@ -113,6 +113,7 @@ function basicSetup(extra?: any) {
     'STADT_LAND_FLUSS_TEST_DATA_ENTID': idmap,
     'STADT_LAND_FLUSS_TEST_LIVE': 'FALSE',
     'STADT_LAND_FLUSS_TEST_EXPLAIN': 'FALSE',
+    'STADT_LAND_FLUSS_APIKEY': 'NONE',
   })
 
   idmap = env['STADT_LAND_FLUSS_TEST_DATA_ENTID']
@@ -122,6 +123,7 @@ function basicSetup(extra?: any) {
   if (live) {
     client = new StadtLandFlussSDK(merge([
       {
+        apikey: env.STADT_LAND_FLUSS_APIKEY,
       },
       extra
     ]))

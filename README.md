@@ -1,20 +1,8 @@
 # StadtLandFluss SDK
 
-German Stadt-Land-Fluss word database delivered as a single JSON file, organised alphabetically by first letter
+Stadt Land Fluss client, generated from the OpenAPI spec.
 
 > TypeScript, Python, PHP, Golang, Ruby, Lua SDKs, a CLI, an interactive REPL, and an MCP server for AI agents — all generated from one OpenAPI spec by [@voxgig/sdkgen](https://github.com/voxgig/sdkgen).
-
-## About Stadt Land Fluss
-
-Stadt Land Fluss is a community-maintained word database for the classic German party game *Stadt-Land-Fluss* (City, Country, River). It is published as a static JSON file by the [slftool](https://github.com/slftool) project and served from GitHub Pages at [slftool.github.io](https://slftool.github.io).
-
-What you get from the API:
-
-- A single `GET https://slftool.github.io/data.json` endpoint returning the full database in JSON.
-- Word lists across the standard categories: Stadt (city), Land (country), Fluss (river), Name (first name), Beruf (profession), Tier (animal), Marke (brand) and Pflanze (plant).
-- Entries organised alphabetically by first letter so you can pick valid answers for any round.
-
-The service is a static file hosted on GitHub Pages: there is no authentication, no API key, and CORS is enabled so it can be fetched directly from a browser. Because it is a single JSON document, the recommended pattern is to fetch once and cache locally. Contributions and additional words are accepted via GitHub issues on the upstream repository.
 
 ## Try it
 
@@ -48,29 +36,31 @@ gem install stadt-land-fluss-sdk
 luarocks install stadt-land-fluss-sdk
 ```
 
-## 30-second quickstart
+## Quickstart
 
 ### TypeScript
 
 ```ts
 import { StadtLandFlussSDK } from 'stadt-land-fluss'
 
-const client = new StadtLandFlussSDK({})
+const client = new StadtLandFlussSDK({
+  apikey: process.env.STADT-LAND-FLUSS_APIKEY,
+})
 
 // List all datas
 const datas = await client.Data().list()
+console.log(datas.data)
 ```
 
-See the [TypeScript README](ts/README.md) for the
-full guide, or scroll down for the same example in other languages.
+See the [TypeScript README](ts/README.md) for the full guide.
 
-## What's in the box
+## Surfaces
 
-| Surface | Use it for | Path |
-| --- | --- | --- |
-| **SDK** (TypeScript, Python, PHP, Golang, Ruby, Lua) | App integration | `ts/` `py/` `php/` `go/` `rb/` `lua/` |
-| **CLI** | Scripts, CI, ops, one-off API calls | `go-cli/` |
-| **MCP server** | AI agents (Claude, Cursor, Cline) | `go-mcp/` |
+| Surface | Path |
+| --- | --- |
+| **SDK** (TypeScript, Python, PHP, Golang, Ruby, Lua) | `ts/` `py/` `php/` `go/` `rb/` `lua/` |
+| **CLI** | `go-cli/` |
+| **MCP server** | `go-mcp/` |
 
 ## Use it from an AI agent (MCP)
 
@@ -100,7 +90,7 @@ The API exposes one entity:
 
 | Entity | Description | API path |
 | --- | --- | --- |
-| **Data** | The full Stadt-Land-Fluss word database, returned by `GET /data.json` as a single JSON document containing word lists for each game category (Stadt, Land, Fluss, Name, Beruf, Tier, Marke, Pflanze) keyed by first letter. | `/data.json` |
+| **Data** |  | `/data.json` |
 
 Each entity supports the following operations where available: **load**,
 **list**, **create**, **update**, and **remove**.
@@ -110,12 +100,16 @@ Each entity supports the following operations where available: **load**,
 ### Python
 
 ```python
+import os
 from stadtlandfluss_sdk import StadtLandFlussSDK
 
-client = StadtLandFlussSDK({})
+client = StadtLandFlussSDK({
+    "apikey": os.environ.get("STADT-LAND-FLUSS_APIKEY"),
+})
 
 # List all datas
-datas, err = client.Data(None).list(None, None)
+datas, err = client.Data().list()
+print(datas)
 ```
 
 ### PHP
@@ -124,10 +118,13 @@ datas, err = client.Data(None).list(None, None)
 <?php
 require_once 'stadtlandfluss_sdk.php';
 
-$client = new StadtLandFlussSDK([]);
+$client = new StadtLandFlussSDK([
+    "apikey" => getenv("STADT-LAND-FLUSS_APIKEY"),
+]);
 
 // List all datas
-[$datas, $err] = $client->Data(null)->list(null, null);
+[$datas, $err] = $client->Data()->list();
+print_r($datas);
 ```
 
 ### Golang
@@ -135,10 +132,13 @@ $client = new StadtLandFlussSDK([]);
 ```go
 import sdk "github.com/voxgig-sdk/stadt-land-fluss-sdk/go"
 
-client := sdk.NewStadtLandFlussSDK(map[string]any{})
+client := sdk.NewStadtLandFlussSDK(map[string]any{
+    "apikey": os.Getenv("STADT-LAND-FLUSS_APIKEY"),
+})
 
 // List all datas
 datas, err := client.Data(nil).List(nil, nil)
+fmt.Println(datas)
 ```
 
 ### Ruby
@@ -146,10 +146,13 @@ datas, err := client.Data(nil).List(nil, nil)
 ```ruby
 require_relative "StadtLandFluss_sdk"
 
-client = StadtLandFlussSDK.new({})
+client = StadtLandFlussSDK.new({
+  "apikey" => ENV["STADT-LAND-FLUSS_APIKEY"],
+})
 
 # List all datas
-datas, err = client.Data(nil).list(nil, nil)
+datas, err = client.Data().list
+puts datas
 ```
 
 ### Lua
@@ -157,10 +160,13 @@ datas, err = client.Data(nil).list(nil, nil)
 ```lua
 local sdk = require("stadt-land-fluss_sdk")
 
-local client = sdk.new({})
+local client = sdk.new({
+  apikey = os.getenv("STADT-LAND-FLUSS_APIKEY"),
+})
 
 -- List all datas
-local datas, err = client:Data(nil):list(nil, nil)
+local datas, err = client:Data():list()
+print(datas)
 ```
 
 ## Unit testing in offline mode
@@ -179,25 +185,21 @@ const result = await client.Data().load({ id: 'test01' })
 ### Python
 
 ```python
-client = StadtLandFlussSDK.test(None, None)
-result, err = client.Data(None).load(
-    {"id": "test01"}, None
-)
+client = StadtLandFlussSDK.test()
+result, err = client.Data().load({"id": "test01"})
 ```
 
 ### PHP
 
 ```php
-$client = StadtLandFlussSDK::test(null, null);
-[$result, $err] = $client->Data(null)->load(
-    ["id" => "test01"], null
-);
+$client = StadtLandFlussSDK::test();
+[$result, $err] = $client->Data()->load(["id" => "test01"]);
 ```
 
 ### Golang
 
 ```go
-client := sdk.TestSDK(nil, nil)
+client := sdk.Test()
 result, err := client.Data(nil).Load(
     map[string]any{"id": "test01"}, nil,
 )
@@ -206,19 +208,15 @@ result, err := client.Data(nil).Load(
 ### Ruby
 
 ```ruby
-client = StadtLandFlussSDK.test(nil, nil)
-result, err = client.Data(nil).load(
-  { "id" => "test01" }, nil
-)
+client = StadtLandFlussSDK.test
+result, err = client.Data().load({ "id" => "test01" })
 ```
 
 ### Lua
 
 ```lua
-local client = sdk.test(nil, nil)
-local result, err = client:Data(nil):load(
-  { id = "test01" }, nil
-)
+local client = sdk.test()
+local result, err = client:Data():load({ id = "test01" })
 ```
 
 ## How it works
@@ -322,16 +320,6 @@ local result, err = client:direct({
 - [Golang](go/README.md)
 - [Ruby](rb/README.md)
 - [Lua](lua/README.md)
-
-## Using the Stadt Land Fluss
-
-- Upstream: [https://slftool.github.io](https://slftool.github.io)
-- API docs: [https://github.com/slftool/slftool.github.io](https://github.com/slftool/slftool.github.io)
-
-- Released under the MIT License.
-- You may use the database for your own purposes, including commercial use, subject to MIT terms.
-- Attribution to the upstream `slftool` project is appreciated.
-- No warranty is provided for completeness or accuracy of word entries.
 
 ---
 
