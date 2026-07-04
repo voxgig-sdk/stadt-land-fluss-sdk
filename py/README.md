@@ -31,14 +31,16 @@ from stadtlandfluss_sdk import StadtLandFlussSDK
 client = StadtLandFlussSDK()
 ```
 
-### 2. List datas
+### 2. List data records
+
+`list()` returns a `list` of records (each a `dict`) and raises on
+error — iterate it directly.
 
 ```python
 try:
-    result = client.data.list()
-    for item in result:
-        d = item.data_get()
-        print(d["id"], d["name"])
+    datas = client.Data().list({})
+    for data in datas:
+        print(data)
 except Exception as err:
     print(f"list failed: {err}")
 ```
@@ -86,8 +88,9 @@ Create a mock client for unit testing — no server required:
 ```python
 client = StadtLandFlussSDK.test()
 
-result = client.data.load({"id": "test01"})
-# result contains mock response data
+# Entity ops return the bare record and raise on error.
+data = client.Data().load({"id": "test01"})
+# data contains the mock response record
 ```
 
 ### Use a custom fetch function
@@ -227,7 +230,7 @@ API path: `/data.json`
 
 ### Data
 
-Create an instance: `const data = client.data`
+Create an instance: `data = client.Data()`
 
 #### Operations
 
@@ -250,8 +253,8 @@ Create an instance: `const data = client.data`
 
 #### Example: List
 
-```ts
-const datas = await client.data.list()
+```python
+datas = client.Data().list({})
 ```
 
 
@@ -325,7 +328,7 @@ Entity instances are stateful. After a successful `load`, the entity
 stores the returned data and match criteria internally.
 
 ```python
-data = client.data
+data = client.Data()
 data.load({"id": "example_id"})
 
 # data.data_get() now returns the loaded data data

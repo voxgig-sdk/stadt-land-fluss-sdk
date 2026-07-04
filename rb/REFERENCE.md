@@ -86,7 +86,7 @@ same parameters as `direct()`. Raises on error.
 ## DataEntity
 
 ```ruby
-data = client.data
+data = client.Data
 ```
 
 ### Fields
@@ -109,7 +109,7 @@ data = client.data
 List entities matching the given criteria. Returns an array. Raises on error.
 
 ```ruby
-results = client.data.list(nil)
+results = client.Data.list(nil)
 ```
 
 ### Common Methods

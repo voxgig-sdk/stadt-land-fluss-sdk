@@ -244,8 +244,9 @@ end
 
 
 
--- Idiomatic facade: client:data():list() / client:data():load({ id = ... })
-function StadtLandFlussSDK:data(data)
+-- Idiomatic facade: client:Data():list() / client:Data():load({ id = ... })
+-- Entity access is capitalised (PascalCase) for parity with the other SDKs.
+function StadtLandFlussSDK:Data(data)
   local EntityMod = require("entity.data_entity")
   if data == nil then
     if self._data == nil then
@@ -253,12 +254,6 @@ function StadtLandFlussSDK:data(data)
     end
     return self._data
   end
-  return EntityMod.new(self, data)
-end
-
--- Deprecated: use client:data() instead.
-function StadtLandFlussSDK:Data(data)
-  local EntityMod = require("entity.data_entity")
   return EntityMod.new(self, data)
 end
 

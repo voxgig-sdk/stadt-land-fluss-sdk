@@ -29,18 +29,16 @@ require_once 'stadtlandfluss_sdk.php';
 $client = new StadtLandFlussSDK();
 ```
 
-### 2. List datas
+### 2. List data records
 
 ```php
 try {
-    $result = $client->data()->list();
-    if (is_array($result)) {
-        foreach ($result as $item) {
-            $d = $item->data_get();
-            echo $d["id"] . " " . $d["name"] . "\n";
-        }
+    // list() returns an array of Data records — iterate directly.
+    $datas = $client->Data()->list();
+    foreach ($datas as $item) {
+        echo $item["id"] . " " . $item["name"] . "\n";
     }
-} catch (\Exception $err) {
+} catch (\Throwable $err) {
     echo "Error: " . $err->getMessage();
 }
 ```
@@ -86,13 +84,17 @@ print_r($fetchdef["headers"]);
 
 ### Use test mode
 
-Create a mock client for unit testing — no server required:
+Create a mock client for unit testing — no server required. Seed fixture
+data via the `entity` option so offline calls resolve without a live server:
 
 ```php
-$client = StadtLandFlussSDK::test();
+$client = StadtLandFlussSDK::test([
+    "entity" => ["data" => ["test01" => ["id" => "test01"]]],
+]);
 
-$result = $client->data()->load(["id" => "test01"]);
-// $result contains mock response data
+// load() returns the bare mock record (throws on error).
+$data = $client->Data()->load(["id" => "test01"]);
+print_r($data);
 ```
 
 ### Use a custom fetch function
@@ -235,7 +237,7 @@ API path: `/data.json`
 
 ### Data
 
-Create an instance: `const data = client.data`
+Create an instance: `$data = $client->Data();`
 
 #### Operations
 
@@ -258,8 +260,9 @@ Create an instance: `const data = client.data`
 
 #### Example: List
 
-```ts
-const datas = await client.data.list()
+```php
+// list() returns an array of Data records (throws on error).
+$datas = $client->Data()->list();
 ```
 
 
@@ -334,7 +337,7 @@ Entity instances are stateful. After a successful `load`, the entity
 stores the returned data and match criteria internally.
 
 ```php
-$data = $client->data();
+$data = $client->Data();
 $data->load(["id" => "example_id"]);
 
 // $data->dataGet() now returns the loaded data data

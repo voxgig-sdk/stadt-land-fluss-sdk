@@ -28,16 +28,14 @@ require_relative "StadtLandFluss_sdk"
 client = StadtLandFlussSDK.new
 ```
 
-### 2. List datas
+### 2. List data records
 
 ```ruby
 begin
-  result = client.data.list
-  if result.is_a?(Array)
-    result.each do |item|
-      d = item.data_get
-      puts "#{d["id"]} #{d["name"]}"
-    end
+  # list returns an Array of Data records — iterate directly.
+  datas = client.Data.list
+  datas.each do |item|
+    puts "#{item["id"]} #{item["name"]}"
   end
 rescue => err
   warn "list failed: #{err}"
@@ -85,13 +83,17 @@ end
 
 ### Use test mode
 
-Create a mock client for unit testing — no server required:
+Create a mock client for unit testing — no server required. Seed fixture
+data via the `entity` option so offline calls resolve without a live server:
 
 ```ruby
-client = StadtLandFlussSDK.test
+client = StadtLandFlussSDK.test({
+  "entity" => { "data" => { "test01" => { "id" => "test01" } } },
+})
 
-result = client.data.load({ "id" => "test01" })
-# result contains mock response data
+# load returns the bare mock record (raises on error).
+data = client.Data.load({ "id" => "test01" })
+puts data
 ```
 
 ### Use a custom fetch function
@@ -230,7 +232,7 @@ API path: `/data.json`
 
 ### Data
 
-Create an instance: `const data = client.data`
+Create an instance: `data = client.Data`
 
 #### Operations
 
@@ -253,8 +255,9 @@ Create an instance: `const data = client.data`
 
 #### Example: List
 
-```ts
-const datas = await client.data.list()
+```ruby
+# list returns an Array of Data records (raises on error).
+datas = client.Data.list
 ```
 
 
@@ -329,7 +332,7 @@ Entity instances are stateful. After a successful `load`, the entity
 stores the returned data and match criteria internally.
 
 ```ruby
-data = client.data
+data = client.Data
 data.load({ "id" => "example_id" })
 
 # data.data_get now returns the loaded data data

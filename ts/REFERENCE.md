@@ -109,7 +109,7 @@ Alias for `StadtLandFlussSDK.test()`.
 ## DataEntity
 
 ```ts
-const data = client.data
+const data = client.Data()
 ```
 
 ### Fields
@@ -132,7 +132,7 @@ const data = client.data
 List entities matching the given criteria. Returns an array.
 
 ```ts
-const results = await client.data.list()
+const results = await client.Data().list()
 ```
 
 ### Common Methods

@@ -85,7 +85,7 @@ Prepare a fetch definition without sending the request. Returns the
 ## DataEntity
 
 ```php
-$data = $client->data();
+$data = $client->Data();
 ```
 
 ### Fields
@@ -108,7 +108,7 @@ $data = $client->data();
 List entities matching the given criteria. Returns an array. Throws on error.
 
 ```php
-$results = $client->data()->list([]);
+$results = $client->Data()->list([]);
 ```
 
 ### Common Methods

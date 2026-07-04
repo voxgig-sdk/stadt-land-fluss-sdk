@@ -26,9 +26,11 @@ import { StadtLandFlussSDK } from '@voxgig-sdk/stadt-land-fluss'
 
 const client = new StadtLandFlussSDK()
 
-// List all datas
-const datas = await client.data.list()
-console.log(datas.data)
+// List all datas (returns Data[])
+const datas = await client.Data().list()
+for (const data of datas) {
+  console.log(data)
+}
 ```
 
 See the [TypeScript README](ts/README.md) for the full guide.
@@ -83,9 +85,10 @@ from stadtlandfluss_sdk import StadtLandFlussSDK
 
 client = StadtLandFlussSDK()
 
-# List all datas
-datas = client.data.list()
-print(datas)
+# List all datas (returns a list, raises on error)
+datas = client.Data().list({})
+for data in datas:
+    print(data)
 ```
 
 ### PHP
@@ -96,8 +99,8 @@ require_once 'stadtlandfluss_sdk.php';
 
 $client = new StadtLandFlussSDK();
 
-// List all datas (throws on error)
-$datas = $client->data()->list();
+// List all datas (returns an array; throws on error)
+$datas = $client->Data()->list();
 print_r($datas);
 ```
 
@@ -120,8 +123,8 @@ require_relative "StadtLandFluss_sdk"
 
 client = StadtLandFlussSDK.new
 
-# List all datas
-datas = client.data.list
+# List all datas (returns an Array; raises on error)
+datas = client.Data.list
 puts datas
 ```
 
@@ -133,7 +136,7 @@ local sdk = require("stadt-land-fluss_sdk")
 local client = sdk.new()
 
 -- List all datas
-local datas, err = client:data():list()
+local datas, err = client:Data():list()
 print(datas)
 ```
 
@@ -146,22 +149,27 @@ in-memory mock, so unit tests run offline.
 
 ```ts
 const client = StadtLandFlussSDK.test()
-const result = await client.data.load({ id: 'test01' })
-// result.ok === true, result.data contains mock data
+const data = await client.Data().load({ id: 'test01' })
+// data is a bare Data populated with mock data
+console.log(data)
 ```
 
 ### Python
 
 ```python
 client = StadtLandFlussSDK.test()
-result = client.data.load({"id": "test01"})
+data = client.Data().load({"id": "test01"})
+print(data)
 ```
 
 ### PHP
 
 ```php
-$client = StadtLandFlussSDK::test();
-$result = $client->data()->load(["id" => "test01"]);
+// Seed fixture data so offline calls resolve without a live server.
+$client = StadtLandFlussSDK::test([
+    "entity" => ["data" => ["test01" => ["id" => "test01"]]],
+]);
+$data = $client->Data()->load(["id" => "test01"]);
 ```
 
 ### Golang
@@ -176,15 +184,18 @@ result, err := client.Data(nil).Load(
 ### Ruby
 
 ```ruby
-client = StadtLandFlussSDK.test
-result = client.data.load({ "id" => "test01" })
+# Seed fixture data so offline calls resolve without a live server.
+client = StadtLandFlussSDK.test({
+  "entity" => { "data" => { "test01" => { "id" => "test01" } } },
+})
+data = client.Data.load({ "id" => "test01" })
 ```
 
 ### Lua
 
 ```lua
 local client = sdk.test()
-local result, err = client:data():load({ id = "test01" })
+local result, err = client:Data():load({ id = "test01" })
 ```
 
 ## How it works
@@ -232,6 +243,9 @@ const result = await client.direct({
   method: 'GET',
   params: { id: 'example' },
 })
+if (result instanceof Error) {
+  throw result
+}
 console.log(result.data)
 ```
 
