@@ -245,6 +245,9 @@ func (sdk *StadtLandFlussSDK) Direct(fetchargs map[string]any) (map[string]any, 
 }
 
 
+// Data returns a Data entity bound to this client.
+// Idiomatic usage: client.Data(nil).List(nil, nil) or
+// client.Data(nil).Load(map[string]any{"id": ...}, nil).
 func (sdk *StadtLandFlussSDK) Data(data map[string]any) StadtLandFlussEntity {
 	return NewDataEntityFunc(sdk, data)
 }

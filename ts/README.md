@@ -9,9 +9,12 @@ The TypeScript SDK for the StadtLandFluss API — a type-safe, entity-oriented c
 
 
 ## Install
-```bash
-npm install @voxgig-sdk/stadt-land-fluss
-```
+This package is not yet published to npm. Install it from the GitHub
+release tag (`ts/vX.Y.Z`):
+
+- Releases: [https://github.com/voxgig-sdk/stadt-land-fluss-sdk/releases](https://github.com/voxgig-sdk/stadt-land-fluss-sdk/releases)
+
+
 ## Tutorial: your first API call
 
 This tutorial walks through creating a client, listing entities, and
@@ -20,17 +23,15 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { StadtLandFlussSDK } from 'stadt-land-fluss'
+import { StadtLandFlussSDK } from '@voxgig-sdk/stadt-land-fluss'
 
-const client = new StadtLandFlussSDK({
-  apikey: process.env.STADT-LAND-FLUSS_APIKEY,
-})
+const client = new StadtLandFlussSDK()
 ```
 
 ### 2. List datas
 
 ```ts
-const result = await client.Data().list()
+const result = await client.data.list()
 
 if (result.ok) {
   for (const item of result.data) {
@@ -81,7 +82,7 @@ Create a mock client for unit testing — no server required:
 ```ts
 const client = StadtLandFlussSDK.test()
 
-const result = await client.Planet().load({ id: 'test01' })
+const result = await client.data.load({ id: 'test01' })
 // result.ok === true
 // result.data contains mock response data
 ```
@@ -89,7 +90,7 @@ const result = await client.Planet().load({ id: 'test01' })
 You can also use the instance method:
 
 ```ts
-const client = new StadtLandFlussSDK({ apikey: '...' })
+const client = new StadtLandFlussSDK()
 const testClient = client.tester()
 ```
 
@@ -98,7 +99,7 @@ const testClient = client.tester()
 Entity instances remember their last match and data:
 
 ```ts
-const entity = client.Planet()
+const entity = client.data
 
 // First call sets internal match
 await entity.load({ id: 'example' })
@@ -125,7 +126,6 @@ const logger = {
 }
 
 const client = new StadtLandFlussSDK({
-  apikey: '...',
   extend: [logger],
 })
 ```
@@ -135,8 +135,7 @@ const client = new StadtLandFlussSDK({
 Create a `.env.local` file at the project root:
 
 ```
-STADT-LAND-FLUSS_TEST_LIVE=TRUE
-STADT-LAND-FLUSS_APIKEY=<your-key>
+STADT_LAND_FLUSS_TEST_LIVE=TRUE
 ```
 
 Then run:
@@ -154,7 +153,6 @@ cd ts && npm test
 
 ```ts
 new StadtLandFlussSDK(options?: {
-  apikey?: string
   base?: string
   prefix?: string
   suffix?: string
@@ -165,7 +163,6 @@ new StadtLandFlussSDK(options?: {
 
 | Option | Type | Description |
 | --- | --- | --- |
-| `apikey` | `string` | API key for authentication. |
 | `base` | `string` | Base URL of the API server. |
 | `prefix` | `string` | URL path prefix prepended to all requests. |
 | `suffix` | `string` | URL path suffix appended to all requests. |
@@ -275,7 +272,7 @@ API path: `/data.json`
 
 ### Data
 
-Create an instance: `const data = client.Data()`
+Create an instance: `const data = client.data`
 
 #### Operations
 
@@ -299,7 +296,7 @@ Create an instance: `const data = client.Data()`
 #### Example: List
 
 ```ts
-const datas = await client.Data().list()
+const datas = await client.data.list()
 ```
 
 
@@ -360,7 +357,7 @@ stadt-land-fluss/
 Import the SDK from the package root:
 
 ```ts
-import { StadtLandFlussSDK } from 'stadt-land-fluss'
+import { StadtLandFlussSDK } from '@voxgig-sdk/stadt-land-fluss'
 ```
 
 ### Entity state
@@ -370,11 +367,11 @@ stores the returned data and match criteria internally. Subsequent
 calls on the same instance can rely on this state.
 
 ```ts
-const moon = client.Moon()
-await moon.load({ planet_id: 'earth', id: 'luna' })
+const data = client.data
+await data.load({ id: "example_id" })
 
-// moon.data() now returns the loaded moon data
-// moon.match() returns { planet_id: 'earth', id: 'luna' }
+// data.data() now returns the loaded data data
+// data.match() returns { id: "example_id" }
 ```
 
 Call `make()` to create a fresh instance with the same configuration

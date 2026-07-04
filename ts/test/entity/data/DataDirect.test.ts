@@ -79,14 +79,12 @@ function directSetup(mockres?: any) {
   const env = envOverride({
     'STADTLANDFLUSS_TEST_DATA_ENTID': {},
     'STADTLANDFLUSS_TEST_LIVE': 'FALSE',
-    'STADTLANDFLUSS_APIKEY': 'NONE',
   })
 
   const live = 'TRUE' === env.STADTLANDFLUSS_TEST_LIVE
 
   if (live) {
     const client = new StadtLandFlussSDK({
-      apikey: env.STADTLANDFLUSS_APIKEY,
     })
 
     let idmap: any = env['STADTLANDFLUSS_TEST_DATA_ENTID']

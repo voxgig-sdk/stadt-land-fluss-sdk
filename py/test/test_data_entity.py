@@ -50,8 +50,7 @@ class TestDataEntity:
         data_ref01_ent = client.Data(None)
         data_ref01_match = {}
 
-        data_ref01_list_result, err = data_ref01_ent.list(data_ref01_match, None)
-        assert err is None
+        data_ref01_list_result = data_ref01_ent.list(data_ref01_match, None)
         assert isinstance(data_ref01_list_result, list)
 
 
@@ -92,7 +91,6 @@ def _data_basic_setup(extra):
         "STADTLANDFLUSS_TEST_DATA_ENTID": idmap,
         "STADTLANDFLUSS_TEST_LIVE": "FALSE",
         "STADTLANDFLUSS_TEST_EXPLAIN": "FALSE",
-        "STADTLANDFLUSS_APIKEY": "NONE",
     })
 
     idmap_resolved = helpers.to_map(
@@ -103,7 +101,6 @@ def _data_basic_setup(extra):
     if env.get("STADTLANDFLUSS_TEST_LIVE") == "TRUE":
         merged_opts = vs.merge([
             {
-                "apikey": env.get("STADTLANDFLUSS_APIKEY"),
             },
             extra or {},
         ])

@@ -43,8 +43,7 @@ class DataEntityTest < Minitest::Test
     data_ref01_ent = client.Data(nil)
     data_ref01_match = {}
 
-    data_ref01_list_result, err = data_ref01_ent.list(data_ref01_match, nil)
-    assert_nil err
+    data_ref01_list_result = data_ref01_ent.list(data_ref01_match, nil)
     assert data_ref01_list_result.is_a?(Array)
 
   end
@@ -83,7 +82,6 @@ def data_basic_setup(extra)
     "STADTLANDFLUSS_TEST_DATA_ENTID" => idmap,
     "STADTLANDFLUSS_TEST_LIVE" => "FALSE",
     "STADTLANDFLUSS_TEST_EXPLAIN" => "FALSE",
-    "STADTLANDFLUSS_APIKEY" => "NONE",
   })
 
   idmap_resolved = Helpers.to_map(
@@ -95,7 +93,6 @@ def data_basic_setup(extra)
   if env["STADTLANDFLUSS_TEST_LIVE"] == "TRUE"
     merged_opts = Vs.merge([
       {
-        "apikey" => env["STADTLANDFLUSS_APIKEY"],
       },
       extra || {},
     ])

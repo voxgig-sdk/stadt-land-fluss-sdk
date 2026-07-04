@@ -15,9 +15,6 @@ module StadtLandFlussConfig
       },
       "options" => {
         "base" => "https://slftool.github.io",
-        "auth" => {
-          "prefix" => "Bearer",
-        },
         "headers" => {
           "content-type" => "application/json",
         },
