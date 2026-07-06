@@ -20,8 +20,7 @@ type Data struct {
 	Tier *[]any `json:"tier,omitempty"`
 }
 
-// DataListMatch mirrors the data fields as an all-optional match
-// filter (Go analog of Partial<Data>).
+// DataListMatch is the typed request payload for Data.ListTyped.
 type DataListMatch struct {
 	Beruf *[]any `json:"beruf,omitempty"`
 	Fluss *[]any `json:"fluss,omitempty"`

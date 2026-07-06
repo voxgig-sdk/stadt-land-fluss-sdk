@@ -45,7 +45,7 @@ Data = Struct.new(
   keyword_init: true
 )
 
-# Match filter for Data#list (any subset of Data fields).
+# Request payload for Data#list.
 #
 # @!attribute [rw] beruf
 #   @return [Array, nil]

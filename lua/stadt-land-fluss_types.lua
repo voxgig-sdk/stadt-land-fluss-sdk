@@ -17,6 +17,14 @@
 ---@field tier? table
 
 ---@class DataListMatch
+---@field beruf? table
+---@field fluss? table
+---@field land? table
+---@field marke? table
+---@field name? table
+---@field pflanze? table
+---@field stadt? table
+---@field tier? table
 
 local M = {}
 

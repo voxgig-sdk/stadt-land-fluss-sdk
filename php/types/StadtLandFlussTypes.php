@@ -25,7 +25,7 @@ class Data
     public ?array $tier = null;
 }
 
-/** Match filter for Data#list (any subset of Data fields). */
+/** Request payload for Data#list. */
 class DataListMatch
 {
     public ?array $beruf = null;

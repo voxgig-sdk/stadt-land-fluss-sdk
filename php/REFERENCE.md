@@ -8,7 +8,7 @@ Complete API reference for the StadtLandFluss PHP SDK.
 ### Constructor
 
 ```php
-require_once __DIR__ . '/stadt-land-fluss_sdk.php';
+require_once __DIR__ . '/stadtlandfluss_sdk.php';
 
 $client = new StadtLandFlussSDK($options);
 ```
@@ -45,11 +45,11 @@ $client = StadtLandFlussSDK::test();
 
 Create a new `DataEntity` instance. Pass `null` for no initial data.
 
-#### `optionsMap(): array`
+#### `options_map(): array`
 
 Return a deep copy of the current SDK options.
 
-#### `getUtility(): ProjectNameUtility`
+#### `get_utility(): StadtLandFlussUtility`
 
 Return a copy of the SDK utility object.
 
@@ -92,40 +92,40 @@ $data = $client->Data();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `beruf` | ``$ARRAY`` | No |  |
-| `fluss` | ``$ARRAY`` | No |  |
-| `land` | ``$ARRAY`` | No |  |
-| `marke` | ``$ARRAY`` | No |  |
-| `name` | ``$ARRAY`` | No |  |
-| `pflanze` | ``$ARRAY`` | No |  |
-| `stadt` | ``$ARRAY`` | No |  |
-| `tier` | ``$ARRAY`` | No |  |
+| `beruf` | `array` | No |  |
+| `fluss` | `array` | No |  |
+| `land` | `array` | No |  |
+| `marke` | `array` | No |  |
+| `name` | `array` | No |  |
+| `pflanze` | `array` | No |  |
+| `stadt` | `array` | No |  |
+| `tier` | `array` | No |  |
 
 ### Operations
 
-#### `list(array $reqmatch, ?array $ctrl = null): mixed`
+#### `list(?array $reqmatch = null, ?array $ctrl = null): mixed`
 
-List entities matching the given criteria. Returns an array. Throws on error.
+List entities matching the given criteria (call with no argument to list all). Returns an array. Throws on error.
 
 ```php
-$results = $client->Data()->list([]);
+$results = $client->Data()->list();
 ```
 
 ### Common Methods
 
-#### `dataGet(): array`
+#### `data_get(): array`
 
 Get the entity data. Returns a copy of the current data.
 
-#### `dataSet($data): void`
+#### `data_set($data): void`
 
 Set the entity data.
 
-#### `matchGet(): array`
+#### `match_get(): array`
 
 Get the entity match criteria.
 
-#### `matchSet($match): void`
+#### `match_set($match): void`
 
 Set the entity match criteria.
 
@@ -134,7 +134,7 @@ Set the entity match criteria.
 Create a new `DataEntity` instance with the same client and
 options.
 
-#### `getName(): string`
+#### `get_name(): string`
 
 Return the entity name.
 

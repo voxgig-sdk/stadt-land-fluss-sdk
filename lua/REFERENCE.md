@@ -90,14 +90,14 @@ local data = client:Data(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `beruf` | ``$ARRAY`` | No |  |
-| `fluss` | ``$ARRAY`` | No |  |
-| `land` | ``$ARRAY`` | No |  |
-| `marke` | ``$ARRAY`` | No |  |
-| `name` | ``$ARRAY`` | No |  |
-| `pflanze` | ``$ARRAY`` | No |  |
-| `stadt` | ``$ARRAY`` | No |  |
-| `tier` | ``$ARRAY`` | No |  |
+| `beruf` | `table` | No |  |
+| `fluss` | `table` | No |  |
+| `land` | `table` | No |  |
+| `marke` | `table` | No |  |
+| `name` | `table` | No |  |
+| `pflanze` | `table` | No |  |
+| `stadt` | `table` | No |  |
+| `tier` | `table` | No |  |
 
 ### Operations
 

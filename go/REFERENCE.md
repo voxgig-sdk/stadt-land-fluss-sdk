@@ -97,14 +97,14 @@ data := client.Data(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `beruf` | ``$ARRAY`` | No |  |
-| `fluss` | ``$ARRAY`` | No |  |
-| `land` | ``$ARRAY`` | No |  |
-| `marke` | ``$ARRAY`` | No |  |
-| `name` | ``$ARRAY`` | No |  |
-| `pflanze` | ``$ARRAY`` | No |  |
-| `stadt` | ``$ARRAY`` | No |  |
-| `tier` | ``$ARRAY`` | No |  |
+| `beruf` | `[]any` | No |  |
+| `fluss` | `[]any` | No |  |
+| `land` | `[]any` | No |  |
+| `marke` | `[]any` | No |  |
+| `name` | `[]any` | No |  |
+| `pflanze` | `[]any` | No |  |
+| `stadt` | `[]any` | No |  |
+| `tier` | `[]any` | No |  |
 
 ### Operations
 

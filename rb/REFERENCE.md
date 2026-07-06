@@ -8,7 +8,7 @@ Complete API reference for the StadtLandFluss Ruby SDK.
 ### Constructor
 
 ```ruby
-require_relative 'stadt-land-fluss_sdk'
+require_relative 'StadtLandFluss_sdk'
 
 client = StadtLandFlussSDK.new(options)
 ```
@@ -93,23 +93,23 @@ data = client.Data
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `beruf` | ``$ARRAY`` | No |  |
-| `fluss` | ``$ARRAY`` | No |  |
-| `land` | ``$ARRAY`` | No |  |
-| `marke` | ``$ARRAY`` | No |  |
-| `name` | ``$ARRAY`` | No |  |
-| `pflanze` | ``$ARRAY`` | No |  |
-| `stadt` | ``$ARRAY`` | No |  |
-| `tier` | ``$ARRAY`` | No |  |
+| `beruf` | `Array` | No |  |
+| `fluss` | `Array` | No |  |
+| `land` | `Array` | No |  |
+| `marke` | `Array` | No |  |
+| `name` | `Array` | No |  |
+| `pflanze` | `Array` | No |  |
+| `stadt` | `Array` | No |  |
+| `tier` | `Array` | No |  |
 
 ### Operations
 
-#### `list(reqmatch, ctrl = nil) -> Array`
+#### `list(reqmatch = nil, ctrl = nil) -> Array`
 
-List entities matching the given criteria. Returns an array. Raises on error.
+List entities matching the given criteria (call with no argument to list all). Returns an array. Raises on error.
 
 ```ruby
-results = client.Data.list(nil)
+results = client.Data.list
 ```
 
 ### Common Methods

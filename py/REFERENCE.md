@@ -8,7 +8,7 @@ Complete API reference for the StadtLandFluss Python SDK.
 ### Constructor
 
 ```python
-from stadt-land-fluss_sdk import StadtLandFlussSDK
+from stadtlandfluss_sdk import StadtLandFlussSDK
 
 client = StadtLandFlussSDK(options)
 ```
@@ -87,23 +87,23 @@ data = client.Data()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `beruf` | ``$ARRAY`` | No |  |
-| `fluss` | ``$ARRAY`` | No |  |
-| `land` | ``$ARRAY`` | No |  |
-| `marke` | ``$ARRAY`` | No |  |
-| `name` | ``$ARRAY`` | No |  |
-| `pflanze` | ``$ARRAY`` | No |  |
-| `stadt` | ``$ARRAY`` | No |  |
-| `tier` | ``$ARRAY`` | No |  |
+| `beruf` | `list` | No |  |
+| `fluss` | `list` | No |  |
+| `land` | `list` | No |  |
+| `marke` | `list` | No |  |
+| `name` | `list` | No |  |
+| `pflanze` | `list` | No |  |
+| `stadt` | `list` | No |  |
+| `tier` | `list` | No |  |
 
 ### Operations
 
-#### `list(reqmatch, ctrl=None) -> list`
+#### `list(reqmatch=None, ctrl=None) -> list`
 
-List entities matching the given criteria. Returns a list and raises on error.
+List entities matching the given criteria. The match is optional — call `list()` with no argument to list all records. Returns a list and raises on error.
 
 ```python
-results = client.Data().list({})
+results = client.Data().list()
 for data in results:
     print(data)
 ```
