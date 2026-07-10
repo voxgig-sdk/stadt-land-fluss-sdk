@@ -19,9 +19,9 @@ main: {
           url: "https://slftool.github.io"
         }
       ]
+      summary: "Compact solution for Stadt Land Fluss (City Country River) game in German."
       title: "Stadt Land Fluss"
       version: "1.0.0"
+      website: "https://github.com/slftool/slftool.github.io"
     }
   }
-}
-

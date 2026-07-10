@@ -91,6 +91,7 @@ same parameters as `Direct()`.
 
 ```go
 data := client.Data(nil)
+fmt.Println(data.GetName()) // "data"
 ```
 
 ### Fields
@@ -114,6 +115,10 @@ List entities matching the given criteria. Returns an array.
 
 ```go
 results, err := client.Data(nil).List(nil, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(results)
 ```
 
 ### Common Methods
