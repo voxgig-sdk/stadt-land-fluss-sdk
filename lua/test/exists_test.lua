@@ -1,4 +1,4 @@
--- ProjectName SDK exists test
+-- StadtLandFluss SDK exists test
 
 local sdk = require("stadt-land-fluss_sdk")
 
