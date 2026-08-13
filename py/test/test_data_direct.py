@@ -3,9 +3,9 @@
 import json
 import pytest
 
-from utility.voxgig_struct import voxgig_struct as vs
+from stadtlandfluss_sdk.utility.voxgig_struct import voxgig_struct as vs
 from stadtlandfluss_sdk import StadtLandFlussSDK
-from core import helpers
+from stadtlandfluss_sdk.core import helpers
 from test import runner
 
 
@@ -58,11 +58,11 @@ def _data_direct_setup(mockres):
     calls = []
 
     env = runner.env_override({
-        "STADTLANDFLUSS_TEST_DATA_ENTID": {},
-        "STADTLANDFLUSS_TEST_LIVE": "FALSE",
+        "STADT_LAND_FLUSS_TEST_DATA_ENTID": {},
+        "STADT_LAND_FLUSS_TEST_LIVE": "FALSE",
     })
 
-    live = env.get("STADTLANDFLUSS_TEST_LIVE") == "TRUE"
+    live = env.get("STADT_LAND_FLUSS_TEST_LIVE") == "TRUE"
 
     if live:
         merged_opts = {

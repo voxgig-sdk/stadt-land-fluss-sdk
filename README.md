@@ -38,9 +38,18 @@ network, and no credentials:
 ### TypeScript
 
 ```ts
-const client = StadtLandFlussSDK.test()
+// The offline mock starts EMPTY — seed it with the records the test needs.
+// Shape: { entity: { <entity-name>: { <id>: <record> } } }
+const client = StadtLandFlussSDK.test({
+  entity: {
+    data: {
+      test01: { id: 'test01' },
+    },
+  },
+})
 const datas = await client.Data().list()
-// datas is an array of bare Data records populated with mock data
+// datas is an array of Data entities, populated with mock data
+// — call datas[0].data() for the record itself
 console.log(datas)
 ```
 
@@ -110,7 +119,7 @@ import { StadtLandFlussSDK } from '@voxgig-sdk/stadt-land-fluss'
 
 const client = new StadtLandFlussSDK()
 
-// List all datas (returns Data[])
+// List all datas (returns DataEntity[] — .data() for the record)
 const datas = await client.Data().list()
 for (const data of datas) {
   console.log(data)
@@ -343,6 +352,9 @@ Pass custom features via the `extend` option at construction time.
 
 This SDK is generated from the upstream OpenAPI specification. It is an
 unofficial client and is not affiliated with the API provider.
+
+The OpenAPI spec(s) this SDK was generated from are kept in the
+[`.sdk/def/`](.sdk/def/) folder.
 
 - Upstream API: [https://github.com/slftool/slftool.github.io](https://github.com/slftool/slftool.github.io)
 

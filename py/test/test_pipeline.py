@@ -16,11 +16,11 @@
 import pytest
 
 from stadtlandfluss_sdk import StadtLandFlussSDK
-from core.error import StadtLandFlussError
-from core.result import StadtLandFlussResult
-from core.response import StadtLandFlussResponse
-from core.spec import StadtLandFlussSpec
-from feature.base_feature import StadtLandFlussBaseFeature
+from stadtlandfluss_sdk.core.error import StadtLandFlussError
+from stadtlandfluss_sdk.core.result import StadtLandFlussResult
+from stadtlandfluss_sdk.core.response import StadtLandFlussResponse
+from stadtlandfluss_sdk.core.spec import StadtLandFlussSpec
+from stadtlandfluss_sdk.feature.base_feature import StadtLandFlussBaseFeature
 
 
 def _client():

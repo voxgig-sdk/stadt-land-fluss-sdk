@@ -33,7 +33,7 @@
 #
 # @!attribute [rw] tier
 #   @return [Array, nil]
-Data = Struct.new(
+DataType = Struct.new(
   :beruf,
   :fluss,
   :land,

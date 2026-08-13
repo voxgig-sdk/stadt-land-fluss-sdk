@@ -66,11 +66,11 @@ function data_direct_setup($mockres)
     $calls = new \ArrayObject();
 
     $env = Runner::env_override([
-        "STADTLANDFLUSS_TEST_DATA_ENTID" => [],
-        "STADTLANDFLUSS_TEST_LIVE" => "FALSE",
+        "STADT_LAND_FLUSS_TEST_DATA_ENTID" => [],
+        "STADT_LAND_FLUSS_TEST_LIVE" => "FALSE",
     ]);
 
-    $live = $env["STADTLANDFLUSS_TEST_LIVE"] === "TRUE";
+    $live = $env["STADT_LAND_FLUSS_TEST_LIVE"] === "TRUE";
 
     if ($live) {
         $merged_opts = [

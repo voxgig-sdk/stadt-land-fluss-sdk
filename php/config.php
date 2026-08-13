@@ -96,6 +96,7 @@ class StadtLandFlussConfig
                 [
                   'active' => true,
                   'args' => [],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/data.json',
                   'parts' => [

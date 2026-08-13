@@ -61,11 +61,11 @@ function data_direct_setup(mockres)
   local calls = {}
 
   local env = runner.env_override({
-    ["STADTLANDFLUSS_TEST_DATA_ENTID"] = {},
-    ["STADTLANDFLUSS_TEST_LIVE"] = "FALSE",
+    ["STADT_LAND_FLUSS_TEST_DATA_ENTID"] = {},
+    ["STADT_LAND_FLUSS_TEST_LIVE"] = "FALSE",
   })
 
-  local live = env["STADTLANDFLUSS_TEST_LIVE"] == "TRUE"
+  local live = env["STADT_LAND_FLUSS_TEST_LIVE"] == "TRUE"
 
   if live then
     local merged_opts = {

@@ -35,7 +35,9 @@ const client = new StadtLandFlussSDK()
 
 ### 2. List data records
 
-`list()` resolves to an array of Data objects — iterate it directly:
+`list()` resolves to an array of Data ENTITIES — every operation
+resolves to entities, not raw records. Iterate them directly, and call
+`.data()` on one for the record it holds:
 
 ```ts
 const datas = await client.Data().list()
@@ -120,7 +122,8 @@ Create a mock client for unit testing — no server required:
 const client = StadtLandFlussSDK.test()
 
 const data = await client.Data().list()
-// data is a bare entity populated with mock response data
+// data is the entity, populated with mock response data
+// — call data.data() for the record itself
 console.log(data)
 ```
 

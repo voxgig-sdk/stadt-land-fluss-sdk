@@ -1,4 +1,4 @@
-# ProjectName SDK exists test
+# StadtLandFluss SDK exists test
 
 import pytest
 from stadtlandfluss_sdk import StadtLandFlussSDK

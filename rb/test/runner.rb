@@ -23,8 +23,8 @@ module StadtLandFlussTestRunner
   end
 
   def self.env_override(m)
-    live = getenv("STADTLANDFLUSS_TEST_LIVE")
-    override = getenv("STADTLANDFLUSS_TEST_OVERRIDE")
+    live = getenv("STADT_LAND_FLUSS_TEST_LIVE")
+    override = getenv("STADT_LAND_FLUSS_TEST_OVERRIDE")
 
     if live == "TRUE" || override == "TRUE"
       m.each_key do |key|
@@ -44,8 +44,8 @@ module StadtLandFlussTestRunner
       end
     end
 
-    explain = getenv("STADTLANDFLUSS_TEST_EXPLAIN")
-    m["STADTLANDFLUSS_TEST_EXPLAIN"] = explain if explain && !explain.empty?
+    explain = getenv("STADT_LAND_FLUSS_TEST_EXPLAIN")
+    m["STADT_LAND_FLUSS_TEST_EXPLAIN"] = explain if explain && !explain.empty?
 
     m
   end

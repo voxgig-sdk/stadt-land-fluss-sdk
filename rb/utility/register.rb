@@ -24,6 +24,7 @@ require_relative 'prepare_method'
 require_relative 'prepare_params'
 require_relative 'prepare_path'
 require_relative 'prepare_query'
+require_relative 'graphql'
 require_relative 'result_basic'
 require_relative 'result_body'
 require_relative 'result_headers'
@@ -55,6 +56,8 @@ StadtLandFlussUtility.registrar = ->(u) {
   u.prepare_params = StadtLandFlussUtilities::PrepareParams
   u.prepare_path = StadtLandFlussUtilities::PreparePath
   u.prepare_query = StadtLandFlussUtilities::PrepareQuery
+  u.graphql_body = StadtLandFlussUtilities::GraphqlBody
+  u.graphql_errors = StadtLandFlussUtilities::GraphqlErrors
   u.result_basic = StadtLandFlussUtilities::ResultBasic
   u.result_body = StadtLandFlussUtilities::ResultBody
   u.result_headers = StadtLandFlussUtilities::ResultHeaders

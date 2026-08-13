@@ -26,8 +26,8 @@ import {
 describe('DataEntity', async () => {
 
   // Per-test live pacing. Delay is read from sdk-test-control.json's
-  // `test.live.delayMs`; only sleeps when STADTLANDFLUSS_TEST_LIVE=TRUE.
-  afterEach(liveDelay('STADTLANDFLUSS_TEST_LIVE'))
+  // `test.live.delayMs`; only sleeps when STADT_LAND_FLUSS_TEST_LIVE=TRUE.
+  afterEach(liveDelay('STADT_LAND_FLUSS_TEST_LIVE'))
 
   test('instance', async () => {
     const testsdk = StadtLandFlussSDK.test()
@@ -63,7 +63,7 @@ describe('DataEntity', async () => {
     const data_ref01_ent = client.Data()
     const data_ref01_match: any = {}
 
-    const data_ref01_list = await data_ref01_ent.list(data_ref01_match)
+    const data_ref01_list = (await data_ref01_ent.list(data_ref01_match)).map((e: any) => e.data())
 
 
   })
