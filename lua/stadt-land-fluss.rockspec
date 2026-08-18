@@ -23,6 +23,7 @@ build = {
   modules = {
     ["stadt-land-fluss_sdk"] = "stadt-land-fluss_sdk.lua",
     ["config"] = "config.lua",
+    ["config_shared"] = "config_shared.lua",
     ["features"] = "features.lua",
   }
 }

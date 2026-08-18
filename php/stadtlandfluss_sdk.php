@@ -40,7 +40,7 @@ class StadtLandFlussSDK
         $utility = new StadtLandFlussUtility();
         $this->_utility = $utility;
 
-        $config = StadtLandFlussConfig::make_config();
+        $config = StadtLandFlussConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,

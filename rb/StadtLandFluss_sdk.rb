@@ -28,7 +28,7 @@ class StadtLandFlussSDK
     utility = StadtLandFlussUtility.new
     @_utility = utility
 
-    config = StadtLandFlussConfig.make_config
+    config = StadtLandFlussConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,

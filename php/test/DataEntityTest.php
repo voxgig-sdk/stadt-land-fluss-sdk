@@ -40,7 +40,7 @@ class DataEntityTest extends TestCase
         $this->assertCount(3, $seen);
 
         // Inbound: streaming active -> yields each item from the feature.
-        $cfg = StadtLandFlussConfig::make_config();
+        $cfg = StadtLandFlussConfig::shared_config();
         if (isset($cfg["feature"]) && is_array($cfg["feature"]) && isset($cfg["feature"]["streaming"])) {
             $sdk = StadtLandFlussSDK::test($seed, ["feature" => ["streaming" => ["active" => true]]]);
             $got = [];

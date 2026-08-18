@@ -15,7 +15,7 @@ require_relative "../StadtLandFluss_sdk"
 module StadtLandFlussFeatureHarness
   # True when this SDK was generated with the named feature.
   def self.has_feature?(name)
-    f = StadtLandFlussConfig.make_config["feature"]
+    f = StadtLandFlussConfig.shared_config["feature"]
     f.is_a?(Hash) && !f[name].nil?
   end
 
