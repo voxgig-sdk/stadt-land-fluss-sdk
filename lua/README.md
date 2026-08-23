@@ -231,14 +231,14 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `beruf` |  |
-| `fluss` |  |
-| `land` |  |
-| `marke` |  |
-| `name` |  |
-| `pflanze` |  |
-| `stadt` |  |
-| `tier` |  |
+| `beruf` | List of professions |
+| `fluss` | List of rivers |
+| `land` | List of countries |
+| `marke` | List of brands |
+| `name` | List of names |
+| `pflanze` | List of plants |
+| `stadt` | List of German cities |
+| `tier` | List of animals |
 
 Operations: List.
 
@@ -263,14 +263,14 @@ Create an instance: `local data = client:Data(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `beruf` | `table` |  |
-| `fluss` | `table` |  |
-| `land` | `table` |  |
-| `marke` | `table` |  |
-| `name` | `table` |  |
-| `pflanze` | `table` |  |
-| `stadt` | `table` |  |
-| `tier` | `table` |  |
+| `beruf` | `table` | List of professions |
+| `fluss` | `table` | List of rivers |
+| `land` | `table` | List of countries |
+| `marke` | `table` | List of brands |
+| `name` | `table` | List of names |
+| `pflanze` | `table` | List of plants |
+| `stadt` | `table` | List of German cities |
+| `tier` | `table` | List of animals |
 
 #### Example: List
 

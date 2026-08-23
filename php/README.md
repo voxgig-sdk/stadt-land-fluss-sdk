@@ -247,14 +247,14 @@ On error, `ok` is `false` and `$err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `beruf` |  |
-| `fluss` |  |
-| `land` |  |
-| `marke` |  |
-| `name` |  |
-| `pflanze` |  |
-| `stadt` |  |
-| `tier` |  |
+| `beruf` | List of professions |
+| `fluss` | List of rivers |
+| `land` | List of countries |
+| `marke` | List of brands |
+| `name` | List of names |
+| `pflanze` | List of plants |
+| `stadt` | List of German cities |
+| `tier` | List of animals |
 
 Operations: List.
 
@@ -279,14 +279,14 @@ Create an instance: `$data = $client->Data();`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `beruf` | `array` |  |
-| `fluss` | `array` |  |
-| `land` | `array` |  |
-| `marke` | `array` |  |
-| `name` | `array` |  |
-| `pflanze` | `array` |  |
-| `stadt` | `array` |  |
-| `tier` | `array` |  |
+| `beruf` | `array` | List of professions |
+| `fluss` | `array` | List of rivers |
+| `land` | `array` | List of countries |
+| `marke` | `array` | List of brands |
+| `name` | `array` | List of names |
+| `pflanze` | `array` | List of plants |
+| `stadt` | `array` | List of German cities |
+| `tier` | `array` | List of animals |
 
 #### Example: List
 

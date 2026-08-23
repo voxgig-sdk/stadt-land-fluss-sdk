@@ -19,9 +19,20 @@ class Config {
     return fi
   }
 
+  // False for a feature added at runtime via options.extend (station's
+  // adopt path) - the constructor uses this to skip makeFeature for names
+  // no generated class backs.
+  hasFeature(this: any, fn: string) {
+    return null != FEATURE_CLASS[fn]
+  }
+
 
   main = {
     name: 'StadtLandFluss',
+        slug: "stadt-land-fluss",
+    version: "0.0.1",
+    target: "ts",
+
   }
 
 
@@ -56,34 +67,42 @@ class Config {
       "fields": [
         {
           "name": "beruf",
+          "short": "List of professions",
           "type": "`$ARRAY`"
         },
         {
           "name": "fluss",
+          "short": "List of rivers",
           "type": "`$ARRAY`"
         },
         {
           "name": "land",
+          "short": "List of countries",
           "type": "`$ARRAY`"
         },
         {
           "name": "marke",
+          "short": "List of brands",
           "type": "`$ARRAY`"
         },
         {
           "name": "name",
+          "short": "List of names",
           "type": "`$ARRAY`"
         },
         {
           "name": "pflanze",
+          "short": "List of plants",
           "type": "`$ARRAY`"
         },
         {
           "name": "stadt",
+          "short": "List of German cities",
           "type": "`$ARRAY`"
         },
         {
           "name": "tier",
+          "short": "List of animals",
           "type": "`$ARRAY`"
         }
       ],

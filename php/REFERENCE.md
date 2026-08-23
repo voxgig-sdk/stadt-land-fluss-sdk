@@ -92,14 +92,14 @@ $data = $client->Data();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `beruf` | `array` | No |  |
-| `fluss` | `array` | No |  |
-| `land` | `array` | No |  |
-| `marke` | `array` | No |  |
-| `name` | `array` | No |  |
-| `pflanze` | `array` | No |  |
-| `stadt` | `array` | No |  |
-| `tier` | `array` | No |  |
+| `beruf` | `array` | No | List of professions |
+| `fluss` | `array` | No | List of rivers |
+| `land` | `array` | No | List of countries |
+| `marke` | `array` | No | List of brands |
+| `name` | `array` | No | List of names |
+| `pflanze` | `array` | No | List of plants |
+| `stadt` | `array` | No | List of German cities |
+| `tier` | `array` | No | List of animals |
 
 ### Operations
 

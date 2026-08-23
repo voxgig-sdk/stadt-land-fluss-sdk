@@ -6,7 +6,7 @@ The Golang SDK for the StadtLandFluss API — an entity-oriented client using st
 
 It exposes the API as capitalised, semantic **Entities** — e.g. `client.Data(nil)` — each with the same small set of operations (`List`) instead of raw URL paths and query strings. You call meaning, not endpoints, which keeps the cognitive load low.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb`, `ts` — see
 > the [top-level README](../README.md).
 
 
@@ -260,14 +260,14 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 
 | Field | Description |
 | --- | --- |
-| `"beruf"` |  |
-| `"fluss"` |  |
-| `"land"` |  |
-| `"marke"` |  |
-| `"name"` |  |
-| `"pflanze"` |  |
-| `"stadt"` |  |
-| `"tier"` |  |
+| `"beruf"` | List of professions |
+| `"fluss"` | List of rivers |
+| `"land"` | List of countries |
+| `"marke"` | List of brands |
+| `"name"` | List of names |
+| `"pflanze"` | List of plants |
+| `"stadt"` | List of German cities |
+| `"tier"` | List of animals |
 
 Operations: List.
 
@@ -292,14 +292,14 @@ Create an instance: `data := client.Data(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `beruf` | `[]any` |  |
-| `fluss` | `[]any` |  |
-| `land` | `[]any` |  |
-| `marke` | `[]any` |  |
-| `name` | `[]any` |  |
-| `pflanze` | `[]any` |  |
-| `stadt` | `[]any` |  |
-| `tier` | `[]any` |  |
+| `beruf` | `[]any` | List of professions |
+| `fluss` | `[]any` | List of rivers |
+| `land` | `[]any` | List of countries |
+| `marke` | `[]any` | List of brands |
+| `name` | `[]any` | List of names |
+| `pflanze` | `[]any` | List of plants |
+| `stadt` | `[]any` | List of German cities |
+| `tier` | `[]any` | List of animals |
 
 #### Example: List
 

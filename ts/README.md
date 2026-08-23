@@ -9,7 +9,7 @@ The API is exposed as capitalised, semantic **Entities** — e.g.
 instead of raw URL paths and query parameters. This keeps the surface
 predictable and low-friction for both humans and AI agents.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go`, `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb` — see
 > the [top-level README](../README.md).
 
 
@@ -287,14 +287,14 @@ The `prepare()` method returns:
 
 | Field | Description |
 | --- | --- |
-| `beruf` |  |
-| `fluss` |  |
-| `land` |  |
-| `marke` |  |
-| `name` |  |
-| `pflanze` |  |
-| `stadt` |  |
-| `tier` |  |
+| `beruf` | List of professions |
+| `fluss` | List of rivers |
+| `land` | List of countries |
+| `marke` | List of brands |
+| `name` | List of names |
+| `pflanze` | List of plants |
+| `stadt` | List of German cities |
+| `tier` | List of animals |
 
 Operations: list.
 
@@ -319,14 +319,14 @@ Create an instance: `const data = client.Data()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `beruf` | `any[]` |  |
-| `fluss` | `any[]` |  |
-| `land` | `any[]` |  |
-| `marke` | `any[]` |  |
-| `name` | `any[]` |  |
-| `pflanze` | `any[]` |  |
-| `stadt` | `any[]` |  |
-| `tier` | `any[]` |  |
+| `beruf` | `any[]` | List of professions |
+| `fluss` | `any[]` | List of rivers |
+| `land` | `any[]` | List of countries |
+| `marke` | `any[]` | List of brands |
+| `name` | `any[]` | List of names |
+| `pflanze` | `any[]` | List of plants |
+| `stadt` | `any[]` | List of German cities |
+| `tier` | `any[]` | List of animals |
 
 #### Example: List
 

@@ -11,6 +11,9 @@ func MakeConfig() map[string]any {
 	return map[string]any{
 		"main": map[string]any{
 			"name": "StadtLandFluss",
+			"slug": "stadt-land-fluss",
+			"version": "0.0.1",
+			"target": "go",
 		},
 		"feature": map[string]any{
 			"test": map[string]any{
@@ -33,34 +36,42 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "beruf",
+						"short": "List of professions",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
 						"name": "fluss",
+						"short": "List of rivers",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
 						"name": "land",
+						"short": "List of countries",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
 						"name": "marke",
+						"short": "List of brands",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
 						"name": "name",
+						"short": "List of names",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
 						"name": "pflanze",
+						"short": "List of plants",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
 						"name": "stadt",
+						"short": "List of German cities",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
 						"name": "tier",
+						"short": "List of animals",
 						"type": "`$ARRAY`",
 					},
 				},

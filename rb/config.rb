@@ -19,6 +19,9 @@ module StadtLandFlussConfig
     {
       "main" => {
         "name" => "StadtLandFluss",
+        "slug" => "stadt-land-fluss",
+        "version" => "0.0.1",
+        "target" => "rb",
       },
       "feature" => {
         "test" => {
@@ -41,34 +44,42 @@ module StadtLandFlussConfig
           "fields" => [
             {
               "name" => "beruf",
+              "short" => "List of professions",
               "type" => "`$ARRAY`",
             },
             {
               "name" => "fluss",
+              "short" => "List of rivers",
               "type" => "`$ARRAY`",
             },
             {
               "name" => "land",
+              "short" => "List of countries",
               "type" => "`$ARRAY`",
             },
             {
               "name" => "marke",
+              "short" => "List of brands",
               "type" => "`$ARRAY`",
             },
             {
               "name" => "name",
+              "short" => "List of names",
               "type" => "`$ARRAY`",
             },
             {
               "name" => "pflanze",
+              "short" => "List of plants",
               "type" => "`$ARRAY`",
             },
             {
               "name" => "stadt",
+              "short" => "List of German cities",
               "type" => "`$ARRAY`",
             },
             {
               "name" => "tier",
+              "short" => "List of animals",
               "type" => "`$ARRAY`",
             },
           ],

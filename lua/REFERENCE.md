@@ -90,14 +90,14 @@ local data = client:Data(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `beruf` | `table` | No |  |
-| `fluss` | `table` | No |  |
-| `land` | `table` | No |  |
-| `marke` | `table` | No |  |
-| `name` | `table` | No |  |
-| `pflanze` | `table` | No |  |
-| `stadt` | `table` | No |  |
-| `tier` | `table` | No |  |
+| `beruf` | `table` | No | List of professions |
+| `fluss` | `table` | No | List of rivers |
+| `land` | `table` | No | List of countries |
+| `marke` | `table` | No | List of brands |
+| `name` | `table` | No | List of names |
+| `pflanze` | `table` | No | List of plants |
+| `stadt` | `table` | No | List of German cities |
+| `tier` | `table` | No | List of animals |
 
 ### Operations
 

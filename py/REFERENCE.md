@@ -87,14 +87,14 @@ data = client.Data()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `beruf` | `list` | No |  |
-| `fluss` | `list` | No |  |
-| `land` | `list` | No |  |
-| `marke` | `list` | No |  |
-| `name` | `list` | No |  |
-| `pflanze` | `list` | No |  |
-| `stadt` | `list` | No |  |
-| `tier` | `list` | No |  |
+| `beruf` | `list` | No | List of professions |
+| `fluss` | `list` | No | List of rivers |
+| `land` | `list` | No | List of countries |
+| `marke` | `list` | No | List of brands |
+| `name` | `list` | No | List of names |
+| `pflanze` | `list` | No | List of plants |
+| `stadt` | `list` | No | List of German cities |
+| `tier` | `list` | No | List of animals |
 
 ### Operations
 

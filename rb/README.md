@@ -237,14 +237,14 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `beruf` |  |
-| `fluss` |  |
-| `land` |  |
-| `marke` |  |
-| `name` |  |
-| `pflanze` |  |
-| `stadt` |  |
-| `tier` |  |
+| `beruf` | List of professions |
+| `fluss` | List of rivers |
+| `land` | List of countries |
+| `marke` | List of brands |
+| `name` | List of names |
+| `pflanze` | List of plants |
+| `stadt` | List of German cities |
+| `tier` | List of animals |
 
 Operations: List.
 
@@ -269,14 +269,14 @@ Create an instance: `data = client.Data`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `beruf` | `Array` |  |
-| `fluss` | `Array` |  |
-| `land` | `Array` |  |
-| `marke` | `Array` |  |
-| `name` | `Array` |  |
-| `pflanze` | `Array` |  |
-| `stadt` | `Array` |  |
-| `tier` | `Array` |  |
+| `beruf` | `Array` | List of professions |
+| `fluss` | `Array` | List of rivers |
+| `land` | `Array` | List of countries |
+| `marke` | `Array` | List of brands |
+| `name` | `Array` | List of names |
+| `pflanze` | `Array` | List of plants |
+| `stadt` | `Array` | List of German cities |
+| `tier` | `Array` | List of animals |
 
 #### Example: List
 

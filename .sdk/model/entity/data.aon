@@ -8,41 +8,49 @@ main: kit: entity: data: {
     {
       name: "beruf"
       req: false
+      short: "List of professions"
       type: "`$ARRAY`"
     }
     {
       name: "fluss"
       req: false
+      short: "List of rivers"
       type: "`$ARRAY`"
     }
     {
       name: "land"
       req: false
+      short: "List of countries"
       type: "`$ARRAY`"
     }
     {
       name: "marke"
       req: false
+      short: "List of brands"
       type: "`$ARRAY`"
     }
     {
       name: "name"
       req: false
+      short: "List of names"
       type: "`$ARRAY`"
     }
     {
       name: "pflanze"
       req: false
+      short: "List of plants"
       type: "`$ARRAY`"
     }
     {
       name: "stadt"
       req: false
+      short: "List of German cities"
       type: "`$ARRAY`"
     }
     {
       name: "tier"
       req: false
+      short: "List of animals"
       type: "`$ARRAY`"
     }
   ]

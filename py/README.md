@@ -243,14 +243,14 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `beruf` |  |
-| `fluss` |  |
-| `land` |  |
-| `marke` |  |
-| `name` |  |
-| `pflanze` |  |
-| `stadt` |  |
-| `tier` |  |
+| `beruf` | List of professions |
+| `fluss` | List of rivers |
+| `land` | List of countries |
+| `marke` | List of brands |
+| `name` | List of names |
+| `pflanze` | List of plants |
+| `stadt` | List of German cities |
+| `tier` | List of animals |
 
 Operations: List.
 
@@ -275,14 +275,14 @@ Create an instance: `data = client.Data()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `beruf` | `list` |  |
-| `fluss` | `list` |  |
-| `land` | `list` |  |
-| `marke` | `list` |  |
-| `name` | `list` |  |
-| `pflanze` | `list` |  |
-| `stadt` | `list` |  |
-| `tier` | `list` |  |
+| `beruf` | `list` | List of professions |
+| `fluss` | `list` | List of rivers |
+| `land` | `list` | List of countries |
+| `marke` | `list` | List of brands |
+| `name` | `list` | List of names |
+| `pflanze` | `list` | List of plants |
+| `stadt` | `list` | List of German cities |
+| `tier` | `list` | List of animals |
 
 #### Example: List
 

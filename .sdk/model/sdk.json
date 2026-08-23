@@ -36,48 +36,56 @@
               "active": true,
               "name": "beruf",
               "req": false,
+              "short": "List of professions",
               "type": "`$ARRAY`"
             },
             {
               "active": true,
               "name": "fluss",
               "req": false,
+              "short": "List of rivers",
               "type": "`$ARRAY`"
             },
             {
               "active": true,
               "name": "land",
               "req": false,
+              "short": "List of countries",
               "type": "`$ARRAY`"
             },
             {
               "active": true,
               "name": "marke",
               "req": false,
+              "short": "List of brands",
               "type": "`$ARRAY`"
             },
             {
               "active": true,
               "name": "name",
               "req": false,
+              "short": "List of names",
               "type": "`$ARRAY`"
             },
             {
               "active": true,
               "name": "pflanze",
               "req": false,
+              "short": "List of plants",
               "type": "`$ARRAY`"
             },
             {
               "active": true,
               "name": "stadt",
               "req": false,
+              "short": "List of German cities",
               "type": "`$ARRAY`"
             },
             {
               "active": true,
               "name": "tier",
               "req": false,
+              "short": "List of animals",
               "type": "`$ARRAY`"
             }
           ],

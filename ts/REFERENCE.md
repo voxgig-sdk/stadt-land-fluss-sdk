@@ -116,14 +116,14 @@ const data = client.Data()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `beruf` | `any[]` | No |  |
-| `fluss` | `any[]` | No |  |
-| `land` | `any[]` | No |  |
-| `marke` | `any[]` | No |  |
-| `name` | `any[]` | No |  |
-| `pflanze` | `any[]` | No |  |
-| `stadt` | `any[]` | No |  |
-| `tier` | `any[]` | No |  |
+| `beruf` | `any[]` | No | List of professions |
+| `fluss` | `any[]` | No | List of rivers |
+| `land` | `any[]` | No | List of countries |
+| `marke` | `any[]` | No | List of brands |
+| `name` | `any[]` | No | List of names |
+| `pflanze` | `any[]` | No | List of plants |
+| `stadt` | `any[]` | No | List of German cities |
+| `tier` | `any[]` | No | List of animals |
 
 ### Operations
 
