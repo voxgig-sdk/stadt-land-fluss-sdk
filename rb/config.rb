@@ -95,14 +95,19 @@ module StadtLandFlussConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/data.json",
-                  "parts" => [
-                    "data.json",
+                  "segments" => [
+                    {
+                      "lit" => "data.json",
+                    },
                   ],
                   "select" => {},
                   "transform" => {
                     "req" => "`reqdata`",
                     "res" => "`body`",
                   },
+                  "parts" => [
+                    "data.json",
+                  ],
                 },
               ],
             },

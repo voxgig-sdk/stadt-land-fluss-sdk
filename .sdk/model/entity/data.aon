@@ -63,8 +63,10 @@ main: kit: entity: data: {
         {
           method: "GET"
           orig: "/data.json"
-          parts: [
-            "data.json"
+          segments: [
+            {
+              lit: "data.json"
+            }
           ]
           transform: {
             req: "`reqdata`"
