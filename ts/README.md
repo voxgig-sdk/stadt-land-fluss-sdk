@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { StadtLandFlussSDK } from '@voxgig-sdk/stadt-land-fluss'
+import { StadtLandFlussSDK } from '@voxgig-sdk/stadt-land-fluss-sdk'
 
 const client = new StadtLandFlussSDK()
 ```
@@ -417,7 +417,7 @@ stadt-land-fluss/
 Import the SDK from the package root:
 
 ```ts
-import { StadtLandFlussSDK } from '@voxgig-sdk/stadt-land-fluss'
+import { StadtLandFlussSDK } from '@voxgig-sdk/stadt-land-fluss-sdk'
 ```
 
 ### Entity state

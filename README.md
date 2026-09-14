@@ -105,7 +105,7 @@ local results, err = client:Data():list()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/stadt-land-fluss` | publish pending — [install from git tag](https://github.com/voxgig-sdk/stadt-land-fluss-sdk/releases) |
+| TypeScript | `@voxgig-sdk/stadt-land-fluss-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/stadt-land-fluss-sdk/releases) |
 | Python | `voxgig-sdk-stadt-land-fluss` | publish pending — [install from git tag](https://github.com/voxgig-sdk/stadt-land-fluss-sdk/releases) |
 | PHP | `voxgig-sdk/stadt-land-fluss` | publish pending — [install from git tag](https://github.com/voxgig-sdk/stadt-land-fluss-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/stadt-land-fluss-sdk/go` | `go get github.com/voxgig-sdk/stadt-land-fluss-sdk/go@latest` |
@@ -119,7 +119,7 @@ local results, err = client:Data():list()
 ### TypeScript
 
 ```ts
-import { StadtLandFlussSDK } from '@voxgig-sdk/stadt-land-fluss'
+import { StadtLandFlussSDK } from '@voxgig-sdk/stadt-land-fluss-sdk'
 
 const client = new StadtLandFlussSDK()
 
