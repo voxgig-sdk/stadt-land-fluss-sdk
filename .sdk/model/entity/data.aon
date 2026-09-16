@@ -61,6 +61,12 @@ main: kit: entity: data: {
       name: "list"
       points: [
         {
+          contract: {
+            id: "GET /data.json"
+            json: "{\"operationId\":\"getDatabase\",\"parameters\":[],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"example\":{\"beruf\":[\"Arzt\",\"Lehrer\",\"Ingenieur\"],\"fluss\":[\"Rhein\",\"Donau\",\"Elbe\"],\"land\":[\"Deutschland\",\"Österreich\",\"Schweiz\"],\"marke\":[\"BMW\",\"Mercedes\",\"Adidas\"],\"name\":[\"Anna\",\"Max\",\"Sophie\"],\"pflanze\":[\"Rose\",\"Tulpe\",\"Baum\"],\"stadt\":[\"Berlin\",\"München\",\"Hamburg\"],\"tier\":[\"Hund\",\"Katze\",\"Elefant\"]},\"schema\":{\"description\":\"Complete database of German words categorized for Stadt Land Fluss game\",\"properties\":{\"beruf\":{\"description\":\"List of professions\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"fluss\":{\"description\":\"List of rivers\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"land\":{\"description\":\"List of countries\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"marke\":{\"description\":\"List of brands\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"name\":{\"description\":\"List of names\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"pflanze\":{\"description\":\"List of plants\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"stadt\":{\"description\":\"List of German cities\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"tier\":{\"description\":\"List of animals\",\"items\":{\"type\":\"string\"},\"type\":\"array\"}},\"type\":\"object\"}}},\"description\":\"Successful response with the complete word database\"},\"404\":{\"content\":{\"application/json\":{\"schema\":{\"description\":\"Error response\",\"properties\":{\"code\":{\"description\":\"Error code\",\"type\":\"integer\"},\"error\":{\"description\":\"Error message\",\"type\":\"string\"}},\"type\":\"object\"}}},\"description\":\"Database not found\"},\"500\":{\"content\":{\"application/json\":{\"schema\":{\"description\":\"Error response\",\"properties\":{\"code\":{\"description\":\"Error code\",\"type\":\"integer\"},\"error\":{\"description\":\"Error message\",\"type\":\"string\"}},\"type\":\"object\"}}},\"description\":\"Internal server error\"}},\"securitySource\":\"unspecified\"}"
+            source: "openapi3"
+            version: 1
+          }
           method: "GET"
           orig: "/data.json"
           segments: [

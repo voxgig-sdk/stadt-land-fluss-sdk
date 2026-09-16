@@ -1,12 +1,18 @@
 # StadtLandFluss SDK feature factory
 
 from stadtlandfluss_sdk.feature.base_feature import StadtLandFlussBaseFeature
+from stadtlandfluss_sdk.feature.ratelimit_feature import StadtLandFlussRatelimitFeature
+from stadtlandfluss_sdk.feature.retry_feature import StadtLandFlussRetryFeature
 from stadtlandfluss_sdk.feature.test_feature import StadtLandFlussTestFeature
+from stadtlandfluss_sdk.feature.timeout_feature import StadtLandFlussTimeoutFeature
 
 
 _FEATURES = {
     "base": lambda: StadtLandFlussBaseFeature(),
+    "ratelimit": lambda: StadtLandFlussRatelimitFeature(),
+    "retry": lambda: StadtLandFlussRetryFeature(),
     "test": lambda: StadtLandFlussTestFeature(),
+    "timeout": lambda: StadtLandFlussTimeoutFeature(),
 }
 
 
