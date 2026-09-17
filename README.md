@@ -105,12 +105,12 @@ local results, err = client:Data():list()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/stadt-land-fluss-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/stadt-land-fluss-sdk/releases) |
-| Python | `voxgig-sdk-stadt-land-fluss` | publish pending — [install from git tag](https://github.com/voxgig-sdk/stadt-land-fluss-sdk/releases) |
-| PHP | `voxgig-sdk/stadt-land-fluss` | publish pending — [install from git tag](https://github.com/voxgig-sdk/stadt-land-fluss-sdk/releases) |
+| TypeScript | `@voxgig-sdk/stadt-land-fluss-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/stadt-land-fluss-sdk/tags) |
+| Python | `voxgig-sdk-stadt-land-fluss` | publish pending — [install from git tag](https://github.com/voxgig-sdk/stadt-land-fluss-sdk/tags) |
+| PHP | `voxgig-sdk/stadt-land-fluss` | publish pending — [install from git tag](https://github.com/voxgig-sdk/stadt-land-fluss-sdk/tags) |
 | Golang | `github.com/voxgig-sdk/stadt-land-fluss-sdk/go` | `go get github.com/voxgig-sdk/stadt-land-fluss-sdk/go@latest` |
-| Ruby | `voxgig-sdk-stadt-land-fluss` | publish pending — [install from git tag](https://github.com/voxgig-sdk/stadt-land-fluss-sdk/releases) |
-| Lua | `voxgig-sdk-stadt-land-fluss` | publish pending — [install from git tag](https://github.com/voxgig-sdk/stadt-land-fluss-sdk/releases) |
+| Ruby | `voxgig-sdk-stadt-land-fluss` | publish pending — [install from git tag](https://github.com/voxgig-sdk/stadt-land-fluss-sdk/tags) |
+| Lua | `voxgig-sdk-stadt-land-fluss` | publish pending — [install from git tag](https://github.com/voxgig-sdk/stadt-land-fluss-sdk/tags) |
 | Go CLI | `github.com/voxgig-sdk/stadt-land-fluss-sdk/go-cli` | `go install github.com/voxgig-sdk/stadt-land-fluss-sdk/go-cli/cmd/stadt-land-fluss@latest` |
 | Go MCP server | `github.com/voxgig-sdk/stadt-land-fluss-sdk/go-mcp` | `go get github.com/voxgig-sdk/stadt-land-fluss-sdk/go-mcp@latest` |
 
